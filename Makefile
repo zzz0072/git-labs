@@ -1,13 +1,13 @@
-SRC=sample_prog
+SRC=sample_prog.c
+OBJ=$(patsubst %.c, %.o, $(SRC))
 LIB=lib/lib_sample
 CFLAGS=-g
 
 TARGET=sample
 
-$(TARGET): $(SRC).o $(LIB).a
+$(TARGET): $(OBJ) $(LIB).a
 	$(CC) -o $@ $^ $(CFLAGS)
 
-$(SRC).o: $(SRC).c
 
 $(LIB).a: $(LIB).c
 	make -C lib

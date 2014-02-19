@@ -1,10 +1,9 @@
-SRC=lib_sample
+SRC=lib_sample.c
+OBJ=$(patsubst %.c, %.o, $(SRC))
+TARGET=$(patsubst %.c, %.a, $(SRC))
 
-TARGET=$(SRC).a
-$(TARGET): $(SRC).o
+$(TARGET): $(OBJ)
 	$(AR) rcs $@ $^
-
-$(SRC).o: $(SRC).c
 
 clean:
 	rm -f $(TARGET) *.o
