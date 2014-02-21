@@ -31,7 +31,7 @@ void bug3(void)
 void bug4(void)
 {
     char *p="Hello world\n";
-    char dst[4];
+    char dst[32];
 
     strcpy(dst, p);
     printf("%s:%s\n", __FUNCTION__, dst);
