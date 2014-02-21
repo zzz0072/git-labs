@@ -39,7 +39,7 @@ void bug4(void)
 
 void bug5(void)
 {
-    char str = {'H','e','l','l','o',' ','W','o','r','l','d','\n' };
+    char str[] = {'H','e','l','l','o',' ','W','o','r','l','d','\n', '\0' };
     char str2[64];
     strcpy(str2, str);
     printf("%s:%s\n", __FUNCTION__,str2);
