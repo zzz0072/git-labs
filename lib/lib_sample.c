@@ -25,7 +25,6 @@ void bug3(void)
 {
     char *p="Hello world\n";
 
-    free(p);
     printf("%s:%s\n", __FUNCTION__, p);
 }
 
