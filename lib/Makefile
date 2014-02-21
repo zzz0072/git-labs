@@ -1,4 +1,5 @@
 SRC=lib_sample.c
+CFLAGS=-g
 OBJ=$(patsubst %.c, %.o, $(SRC))
 TARGET=$(patsubst %.c, %.a, $(SRC))
 
