@@ -13,7 +13,7 @@ void bug1(void)
 
 void bug2(void)
 {
-    char *p;
+    char p[32] = {0};
 
     strcpy(p, "Hello world\n");
 
