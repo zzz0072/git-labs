@@ -4,10 +4,11 @@
 
 void bug1(void)
 {
-    int *p = 1000;
+    int target = 100;
+    int *p = & target;
 
     *p = 10;
-    printf("%s: %d\n", __FUNCTION__, *p);
+    printf("%s: Target is %d\n", __FUNCTION__, target);
 }
 
 void bug2(void)
