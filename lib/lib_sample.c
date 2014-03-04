@@ -4,6 +4,7 @@
 
 void bug1(void)
 {
+    //~"~
     int *p = 1000;
 
     *p = 10;
